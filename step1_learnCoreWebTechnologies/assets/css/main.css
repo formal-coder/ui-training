@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto";
+    overflow: hidden;
+}
+
+:root {
+    --blue: rgb(33, 127, 156);
+    --gray: rgb(55,66,81);
+    --blueLink: #007BFF;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background: url("../images/curbiq-background-image.png") no-repeat top;
+    background-size: cover;
+    display: flex;
+}
+
+#select-language {
+    padding: 10px 10px;
+    width: 150px;
+    background: transparent;
+    font-size: 1rem;
+    border-color: #00000010;
+    font-weight: 500;
+    border-radius: 10px;
+    outline: none;
+    margin: 20px 0px;
+    appearance: none;
+    background: transparent url('../images/angle-bottom-icon.svg') no-repeat right 10px center;
+    background-size: 10px;
+}
+
+#select-language:hover {
+    border-color: #00000050;
+}
+
+#select-language:open {
+    background: transparent url('../images/angle-top-icon.svg') no-repeat right 10px center;
+    background-size: 10px;
+}
+
+#login-heading {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+main {
+    width: 410px;
+    height: fit-content;
+    margin: 20px 130px;
+}
+
+main > * {
+    margin: 10px 0px;
+}
+
+#login-holder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 30px;
+    background-color: #fff;
+    border: 1px solid #e8e8e8;
+    box-shadow:
+            0px 10px 30px #00000000,
+            0px 5px 15px #00000010;
+    padding: 20px 10px;
+}
+
+#login-holder > * {
+    margin: 15px;
+}
+
+#login-input {
+    width: 90%;
+    display: flex;
+    padding: 5px;
+    font-size: 1.1em;
+    flex-direction: column;
+    border: 1px solid #00000001;
+}
+
+#login-input > * {
+    margin: 5px;
+}
+
+label {
+    font-size: 0.8em;
+    font-weight: 500;
+    color: #222222;
+}
+
+a {
+    text-decoration: none;
+    color: var(--blueLink);
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+#forgot-password-ref {
+    font-size: 0.9em;
+    font-weight: 500;
+}
+
+.input-text {
+    border: none;
+    font-weight: 500;
+    font-size: 0.9em;
+    color: gray;
+}
+
+#email, .password-container {
+    border-radius: 10px;
+    border: 1px solid #00000010;
+}
+
+.password-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    border: 1px solid #00000010;
+}
+
+#password, #email {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+}
+
+#view-password {
+    margin: 10px;
+}
+
+.submit-input {
+    padding: 10px;
+    border: none;
+    background-color: var(--blue);
+    color: white;
+    border-radius: 10px;
+}
+
+#forgot-password-ref {
+    width: 100%;
+    font-size: 0.85rem;
+    text-align: right;
+    padding: 20px;
+}
+
+#compliance-text {
+    color: gray;
+    font-size: 0.8em;
+    padding: 10px;
+}
+
+.divider {
+    height: 1em;
+    border: 1px solid gray;
+    margin: 4px;
+}
+
+#product-rights-text {
+    display: flex;
+    align-items: center;
+}
+
+#arcadis-logo {
+    padding: 5px;
+}
+
+footer {
+    width: 100%;
+    font-size: 0.85rem;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    bottom: 0px;
+    color: var(--gray);
+    padding: 15px;
+}
