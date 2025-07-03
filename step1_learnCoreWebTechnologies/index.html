@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <select id="select-language">
+            <option value="english" selected aria-selected="true">English</option>
+            <option value="french">French</option>
+        </select>
+        <div id="login-holder">
+            <img width="200" src="assets/images/curbiq-logo.svg" alt="curbiq image">
+            <p id="login-heading">Log in to access</p>
+            <form id="login-input">
+                <label for="email">Email address</label>
+                <input class="input-text" id="email" placeholder="Enter Username" />
+                <label for="password">Password</label>
+                <div class="password-container">
+                    <input class="input-text" id="password" placeholder="Enter Password" />
+                    <img id="view-password" width="20"/>
+                </div>
+                <a href="#" id="forgot-password-ref">Forgot Password?</a>
+                <input class="submit-input" type="submit" value="Log In" />
+            </form>
+            <p id="compliance-text">By signing in, you agree to our <a href="#">privacy policy</a></p>
+        </div>
+    </main>
+    <footer>
+        <div id="product-rights-text">
+            CurbIQ is a product of
+            <img src="assets/images/arcadis-logo.svg" alt="arcadis logo" id="arcadis-logo"/>
+            <span class="divider"></span>
+            <span id="year-container"></span> All Rights Reserved
+        </div>
+        <div>
+            For more details, visit :www.arcadis.com
+            <span class="divider"></span>
+            www.curbiq.io
+        </div>
+    </footer>
+<script>
+    const dateContainer = document.getElementById('year-container');
+	const passwordViewToggle = document.getElementById('view-password');
+	const images = 'assets/images/';
+
+	window.onload = () => {
+        dateContainer.innerHTML = `&copy; ` + new Date().getFullYear();
+		passwordViewToggle.src = images + 'eye-alt.svg ';
+    };
+
+	passwordViewToggle.onclick = () => {
+		if (passwordViewToggle.src.endsWith(images + 'eye-alt.svg')) {
+            passwordViewToggle.src = images + 'eye-slash.svg';
+        } else {
+			passwordViewToggle.src = images + 'eye-alt.svg';
+        }
+    };
+</script>
+</body>
+</html>
